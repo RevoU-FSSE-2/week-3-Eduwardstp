@@ -30,7 +30,8 @@
 body {
     background-color: white;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    align-items: center;
 }
 
 /* navbar */
@@ -204,12 +205,7 @@ div.desc {
     box-sizing: border-box;
 }
 
-.responsive {
-    width: 100%;
-    height: 100%;
-}
-
-.flexgambar {
+.containergambar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -225,9 +221,34 @@ div.desc {
     margin-bottom: 50px;
 }
 
+.containergambar {
+    display: flex;
+}
+
+.card a img {
+    height: 400px;
+    width: 450px;
+    box-shadow: 5px 5px 20px black;
+    align-items: center;
+}
+
+/* Transition Gambar */
+
+.card img {
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.card:hover .abc {
+    filter: grayscale(0%);
+    transition-delay: 1s;
+    transition-property: all;
+
+}
+
 /* css for tablet */
 @media (max-width: 768px) {
-    .flexgambar {
+    .containergambar {
         width: 100%;
         padding: 0 10px;
     }
@@ -235,7 +256,7 @@ div.desc {
 
 /* css for mobile */
 @media (max-width: 480px) {
-    .flexgambar {
+    .containergambar {
         width: 100%;
         padding: 0 10px;
         flex-direction: column;
@@ -277,7 +298,7 @@ input[type="date"] {
     background-color: #0080ff;
     color: #ffff;
     padding: 5px;
-    font-family: "roboto mono",monospace;
+    font-family: "roboto mono", monospace;
     font-size: 15px;
     border-radius: 5px;
 }
@@ -308,4 +329,3 @@ button[type="submit"]:hover {
     background-size: cover;
     background-position: center;
 }
-
