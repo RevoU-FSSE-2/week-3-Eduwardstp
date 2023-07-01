@@ -298,8 +298,8 @@ textarea {
 }
 
 input[type="date"] {
-    background-color: #0080ff;
-    color: #ffff;
+    background-color: white;
+    color: black;
     padding: 5px;
     font-family: "roboto mono", monospace;
     font-size: 15px;
